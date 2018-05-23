@@ -39,6 +39,6 @@ COPY aurto /etc/pacman.d/aurto
 RUN install -d /var/cache/pacman/aurto -o build
 
 USER build
-RUN repo-add /var/cache/pacman/aurto/aurto.db
+RUN repo-add /var/cache/pacman/aurto/aurto.db.tar
 
 CMD ["init"]
