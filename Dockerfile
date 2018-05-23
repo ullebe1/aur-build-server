@@ -41,4 +41,5 @@ RUN install -d /var/cache/pacman/aurto -o build
 USER build
 RUN repo-add /var/cache/pacman/aurto/aurto.db.tar
 
+USER root
 CMD ["init"]
