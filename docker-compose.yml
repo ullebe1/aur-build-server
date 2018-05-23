@@ -3,8 +3,8 @@ services:
   web:
     build: .
     restart: always
-  volumes:
-    - "./packagecache:/var/cache/pacman/aurto:rw"
+    volumes:
+      - "./packagecache:/var/cache/pacman/aurto:rw"
   repo-server:
     image: nginx
     restart: always
