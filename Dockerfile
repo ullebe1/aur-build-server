@@ -3,6 +3,7 @@ FROM archimg/base-devel
 USER root
 
 RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm
+RUN useradd --create-home build
 
 USER build
 
