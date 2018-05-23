@@ -29,4 +29,4 @@ RUN makepkg
 USER root
 RUN pacman -U *.pkg.tar.xz --noconfirm
 
-CMD bash
+CMD ["sleep", "infinity"]
