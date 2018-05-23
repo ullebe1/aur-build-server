@@ -29,4 +29,6 @@ RUN makepkg
 USER root
 RUN pacman -U *.pkg.tar.xz --noconfirm
 
+STOPSIGNAL SIGRTMIN+3
+ENV container docker
 CMD ["init"]
