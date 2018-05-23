@@ -2,7 +2,7 @@ FROM nubs/arch-build
 
 USER root
 
-#RUN pacman --sync --noconfirm --noprogressbar --quiet php
+RUN pacman --sync --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm systemd
 
 USER build
 
