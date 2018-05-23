@@ -4,7 +4,7 @@ services:
     build: .
     restart: always
   volumes:
-   - "./packagecache:/var/cache/pacman/aurto:rw"
+    - "./packagecache:/var/cache/pacman/aurto:rw"
   repo-server:
     image: nginx
     restart: always
@@ -12,4 +12,4 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-     - "./packagecache:/usr/share/nginx/html:ro"
+      - "./packagecache:/usr/share/nginx/html:ro"
