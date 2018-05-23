@@ -12,10 +12,18 @@ RUN gpg --recv-keys 6BC26A17B9B7018A
 WORKDIR /home/build
 RUN git clone https://aur.archlinux.org/aurutils.git
 WORKDIR aurutils
-RUN makepkg -si
+RUN makepkg
+
+# Install aurtils
+USER root
+RUN pacman -U *.pkg.tar.xz
 
 # Build aurto
 WORKDIR /home/build
 RUN git clone https://aur.archlinux.org/aurto.git
 WORKDIR aurto
-RUN makepkg -si
+RUN makepkg
+
+# Install aurto
+USER root
+RUN pacman -U *.pkg.tar.xz
