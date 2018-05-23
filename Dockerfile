@@ -8,9 +8,13 @@ RUN useradd --create-home build
 USER build
 
 # Build aurutils
+WORKDIR /home/build
 RUN git clone https://aur.archlinux.org/aurutils.git
-RUN cd aurutils && makepkg -si
+WORKDIR aurutils
+RUN makepkg -si
 
 # Build aurto
+WORKDIR /home/build
 RUN git clone https://aur.archlinux.org/aurto.git
-RUN cd aurto && makepkg -si
+WORKDIR aurto
+RUN makepkg -si
