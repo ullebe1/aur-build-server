@@ -16,7 +16,7 @@ RUN makepkg
 
 # Install aurtils
 USER root
-RUN pacman -U *.pkg.tar.xz
+RUN pacman -U *.pkg.tar.xz --noconfirm
 
 # Build aurto
 WORKDIR /home/build
@@ -26,4 +26,4 @@ RUN makepkg
 
 # Install aurto
 USER root
-RUN pacman -U *.pkg.tar.xz
+RUN pacman -U *.pkg.tar.xz --noconfirm
