@@ -2,7 +2,7 @@ FROM archimg/base-devel
 
 USER root
 
-RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm systemd
+RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm
 
 USER build
 
