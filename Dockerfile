@@ -4,6 +4,7 @@ USER root
 
 RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm
 RUN useradd --create-home build
+RUN gpg --recv-keys 6BC26A17B9B7018A
 
 USER build
 
