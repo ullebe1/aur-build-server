@@ -8,11 +8,8 @@ USER build
 
 # Build aurutils
 RUN git clone https://aur.archlinux.org/aurutils.git
-RUN cd aurutils
-RUN makepkg -si
-RUN cd
+RUN cd aurutils && makepkg -si
 
 # Build aurto
 RUN git clone https://aur.archlinux.org/aurto.git
-RUN cd aurto
-RUN makepkg -si
+RUN cd aurto && makepkg -si
