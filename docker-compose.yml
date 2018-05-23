@@ -5,6 +5,8 @@ services:
     restart: always
     volumes:
       - "./packagecache:/var/cache/pacman/aurto:rw"
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    privileged: true
   repo-server:
     image: nginx
     restart: always
