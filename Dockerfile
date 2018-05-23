@@ -1,4 +1,4 @@
-FROM nubs/arch-build
+FROM archimg/base-devel
 
 USER root
 
