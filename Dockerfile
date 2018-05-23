@@ -37,7 +37,7 @@ RUN systemctl enable check-aurto-git-trigger.timer
 RUN echo "build" > /lib/aurto/user
 RUN echo "Include = /etc/pacman.d/aurto" >> /etc/pacman.conf
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-RUN echo "build ALL = NOPASSWD: /usr/sbin/pacsync /usr/sbin/aurto"
+RUN echo "build ALL = NOPASSWD: /usr/sbin/pacsync /usr/sbin/aurto" >> /etc/sudoers
 COPY aurto /etc/pacman.d/aurto
 RUN install -d /var/cache/pacman/aurto
 RUN chown build /var/cache/pacman/aurto
