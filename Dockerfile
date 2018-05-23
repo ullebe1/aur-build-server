@@ -28,3 +28,5 @@ RUN makepkg
 # Install aurto
 USER root
 RUN pacman -U *.pkg.tar.xz --noconfirm
+
+CMD bash
