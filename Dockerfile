@@ -33,5 +33,12 @@ STOPSIGNAL SIGRTMIN+3
 ENV container docker
 RUN systemctl enable update-aurto.timer
 RUN systemctl enable check-aurto-git-trigger.timer
+RUN echo "build" | tee /etc/aurto/user
+RUN echo "Include = /etc/pacman.d/aurto" >> /etc/pacman.conf
+COPY aurto /etc/pacman.d/aurto
+RUN install -d /var/cache/pacman/aurto -o build
+
+USER build
+RUN repo-add /var/cache/pacman/aurto/aurto.db
 
 CMD ["init"]
