@@ -31,4 +31,7 @@ RUN pacman -U *.pkg.tar.xz --noconfirm
 
 STOPSIGNAL SIGRTMIN+3
 ENV container docker
+RUN systemctl enable update-aurto.timer
+RUN systemctl enable check-aurto-git-trigger.timer
+
 CMD ["init"]
