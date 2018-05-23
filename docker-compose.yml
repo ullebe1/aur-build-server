@@ -15,4 +15,4 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - "./packagecache:/usr/share/nginx/html:ro"
+      - "./packagecache:/usr/share/nginx/html:z"
