@@ -5,7 +5,7 @@ services:
     restart: always
     volumes:
       - "./packagecache:/var/cache/pacman/aurto:rw"
-      - ".builddir:/var/lib/aurbuild/:rw"
+      - "./builddir:/var/lib/aurbuild/:rw"
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
     privileged: true
   repo-server:
