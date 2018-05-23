@@ -1,6 +1,6 @@
 version: '2'
 services:
-  web:
+  aur-builder:
     build: .
     restart: always
     volumes:
