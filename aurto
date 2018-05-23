@@ -3,6 +3,6 @@ CacheDir = /var/cache/pacman/pkg
 CacheDir = /var/cache/pacman/aurto
 CleanMethod = KeepCurrent
 
-[custom]
+[aurto]
 SigLevel = Optional TrustAll
 Server = file:///var/cache/pacman/aurto

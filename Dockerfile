@@ -36,7 +36,8 @@ RUN systemctl enable check-aurto-git-trigger.timer
 RUN echo "build" > /lib/aurto/user
 RUN echo "Include = /etc/pacman.d/aurto" >> /etc/pacman.conf
 COPY aurto /etc/pacman.d/aurto
-RUN install -d /var/cache/pacman/aurto -o build
+RUN install -d /var/cache/pacman/aurto
+RUN chown build /var/cache/pacman/aurto
 
 USER build
 RUN repo-add /var/cache/pacman/aurto/aurto.db.tar
