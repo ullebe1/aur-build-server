@@ -43,7 +43,7 @@ RUN install -d /var/cache/pacman/ulrepo
 RUN chown build /var/cache/pacman/ulrepo
 
 # Copy service for rebuild
-COPY ulrepo-build.services /etc/systemd/system/ulrepo-build.services
+COPY ulrepo-build.service /etc/systemd/system/ulrepo-build.service
 COPY ulrepo-build.timer /etc/systemd/system/ulrepo-build.timer
 RUN systemctl enable ulrepo-build.timer
 
