@@ -1,0 +1,7 @@
+[Unit]
+Description=ulrepo build services
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aursync -c -T
+StandardError=journal

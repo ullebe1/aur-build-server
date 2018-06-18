@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for ulrepo build
+
+[Timer]
+# Define target unit (in case the name part is the same, can be omitted)
+Unit=ulrepo-build.service
+OnBootSec=5min
+OnUnitActiveSec=60min
+
+[Install]
+WantedBy=multi-user.target

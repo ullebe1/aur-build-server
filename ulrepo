@@ -1,8 +1,8 @@
 [options]
 CacheDir = /var/cache/pacman/pkg
-CacheDir = /var/cache/pacman/aurto
+CacheDir = /var/cache/pacman/ulrepo
 CleanMethod = KeepCurrent
 
-[aurto]
+[ulrepo]
 SigLevel = Optional TrustAll
-Server = file:///var/cache/pacman/aurto
+Server = file:///var/cache/pacman/ulrepo
