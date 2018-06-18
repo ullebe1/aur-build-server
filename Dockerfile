@@ -35,6 +35,9 @@ ENV container docker
 #RUN systemctl enable update-aurto.timer
 #RUN systemctl enable check-aurto-git-trigger.timer
 #RUN echo "build" > /lib/aurto/user
+RUN echo "[multilib]" >> /etc/pacman.conf
+RUN echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+RUN echo "[ulrepo]" >> /etc/pacman.conf
 RUN echo "Include = /etc/pacman.d/ulrepo" >> /etc/pacman.conf
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN echo "build ALL = NOPASSWD: /usr/sbin/pacsync /usr/sbin/aurto" >> /etc/sudoers
