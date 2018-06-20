@@ -7,8 +7,8 @@ RUN useradd --create-home build
 
 # Build aurutils
 USER build
-RUN echo "keyserver-options auto-key-retrieve" >> /home/build/.gnupg/gpg.conf
 WORKDIR /home/build
+RUN echo "keyserver-options auto-key-retrieve" >> /home/build/.gnupg/gpg.conf
 RUN git clone https://aur.archlinux.org/aurutils.git
 WORKDIR aurutils
 RUN makepkg
