@@ -16,7 +16,7 @@ services:
       - "443:443"
     volumes:
       - "./packagecache:/usr/share/nginx/html:z"
-      - ".default.conf:/etc/nginx/conf.d/default.conf:ro"
+      - "${PWD}/default.conf:/etc/nginx/conf.d/default.conf:ro"
     security_opt:
       - label:disable
   watchtower:
