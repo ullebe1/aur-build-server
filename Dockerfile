@@ -4,6 +4,7 @@ USER root
 
 RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm
 RUN useradd --create-home build
+RUN usermod -g wheel build
 
 # Build aurutils
 USER build
