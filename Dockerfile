@@ -2,7 +2,7 @@ FROM archlinux
 
 USER root
 
-RUN pacman -Syu --noconfirm --noprogressbar --quiet base base-devel git jq pacutils pacman aria2 devtools expac parallel repose vifm diffstat wget
+RUN pacman -Syu --noconfirm --noprogressbar --quiet base base-devel bash git jq pacutils pacman aria2 devtools expac parallel repose vifm diffstat wget
 RUN useradd --create-home build
 RUN usermod -g wheel build
 

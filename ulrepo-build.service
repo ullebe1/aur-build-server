@@ -4,5 +4,5 @@ Description=ulrepo build services
 [Service]
 Type=simple
 User=build
-ExecStart=/usr/bin/aursync --repo ulrepo --root /var/cache/pacman/ulrepo -c -T -u
+ExecStart=/usr/bin/aur sync -d ulrepo --root /var/cache/pacman/ulrepo -c -T -u -n --noview
 StandardError=journal
