@@ -1,8 +1,8 @@
-FROM archimg/base-devel
+FROM archlinux
 
 USER root
 
-RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm
+RUN pacman -Syu --noconfirm --noprogressbar --quiet git jq pacutils pacman aria2 devtools expac parallel repose vifm base base-devel
 RUN useradd --create-home build
 RUN usermod -g wheel build
 
