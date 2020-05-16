@@ -2,7 +2,7 @@ FROM archlinux
 
 USER root
 
-RUN pacman -Syu --noconfirm --noprogressbar --quiet base base-devel bash git jq pacutils pacman aria2 devtools expac parallel repose vifm diffstat wget
+RUN pacman -Syu --noconfirm --noprogressbar --quiet base base-devel bash git jq pacutils pacman aria2 devtools expac parallel repose vifm diffstat wget pacman-contrib
 RUN useradd --create-home build
 RUN usermod -g wheel build
 
@@ -30,6 +30,7 @@ RUN echo "build ALL = NOPASSWD: /usr/sbin/pacsync" >> /etc/sudoers
 COPY ulrepo /etc/pacman.d/ulrepo
 RUN install -d /var/cache/pacman/ulrepo
 RUN chown build /var/cache/pacman/ulrepo
+RUN systemctl enable paccache.timer
 
 # Copy service for rebuild
 COPY ulrepo-build.service /etc/systemd/system/ulrepo-build.service
