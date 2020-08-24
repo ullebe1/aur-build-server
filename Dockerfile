@@ -37,6 +37,7 @@ RUN systemctl enable paccache.timer
 COPY ulrepo-build.service /etc/systemd/system/ulrepo-build.service
 COPY ulrepo-build.timer /etc/systemd/system/ulrepo-build.timer
 RUN systemctl enable ulrepo-build.timer
+RUN systemctl enable paccache.timer
 
 USER root
 CMD ["init"]
