@@ -18,7 +18,7 @@ RUN makepkg
 
 # Install aurtils
 USER root
-RUN pacman -U *.pkg.tar.xz --noconfirm
+RUN pacman -U *.pkg.tar.zst --noconfirm
 
 # Setup configs
 STOPSIGNAL SIGRTMIN+3
