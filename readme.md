@@ -3,7 +3,12 @@ Some manual setup still required.
 
 Add packages with: 
 ```bash
-docker exec --tty -u build ulrepo-stuff_aur-builder_1 aur sync -d ulrepo --root /var/cache/pacman/ulrepo -ncT --noview <package-name>
+docker exec --tty -u build ulrepo-stuff_aur-builder_1 aur sync -d ulrepo --root /var/cache/pacman/ulrepo -ncT --noview <package-name(s)>
+```
+
+Remove packages with:
+```
+docker exec --tty -u build ulrepo-stuff_aur-builder_1 repo-remove /var/cache/pacman/ulrepo/ulrepo.db.tar <package-name(s)>
 ```
 
 ## Requirements
