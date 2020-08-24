@@ -11,7 +11,7 @@ USER build
 WORKDIR /home/build
 RUN mkdir -p /home/build/.gnupg/
 RUN echo "keyserver-options auto-key-retrieve" >> /home/build/.gnupg/gpg.conf
-RUN echo "keyserver hkps://keyserver.ubuntu.com" >> /home/build/.gnupg/gpg.conf
+RUN echo "keyserver ha.pool.sks-keyservers.net" >> /home/build/.gnupg/gpg.conf
 RUN git clone https://aur.archlinux.org/aurutils.git
 WORKDIR aurutils
 RUN makepkg
