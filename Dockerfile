@@ -43,6 +43,7 @@ COPY ulrepo-build.service /etc/systemd/system/ulrepo-build.service
 COPY ulrepo-build.timer /etc/systemd/system/ulrepo-build.timer
 RUN systemctl enable ulrepo-build.timer
 RUN systemctl enable paccache.timer
+RUN echo "ForwardToConsole=yes" >> /etc/systemd/journald.conf
 
 USER root
 CMD ["init"]
