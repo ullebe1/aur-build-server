@@ -35,6 +35,7 @@ RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN echo "build ALL = NOPASSWD: /usr/sbin/pacsync" >> /etc/sudoers
 COPY ulrepo /etc/pacman.d/ulrepo
 RUN cat /usr/share/devtools/pacman-multilib.conf /etc/pacman.d/ulrepo > /etc/aurutils/pacman-ulrepo.conf
+RUN echo "MAKEFLAGS=\"-j\$((\$(nproc) - 1))\"" >> /etc/makepkg.conf
 RUN install -d /var/cache/pacman/ulrepo
 RUN chown build /var/cache/pacman/ulrepo
 RUN systemctl enable paccache.timer
