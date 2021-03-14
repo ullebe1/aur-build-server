@@ -1,4 +1,4 @@
-FROM archlinux
+FROM archlinux/archlinux:base-devel
 
 USER root
 
